@@ -19,5 +19,12 @@ use App\Http\Controllers\MovieController;
 //     return view('welcome');
 // });
 
-Route::resource('movies', MovieController::class);
+Route::get('/', function () {
+    return view('welcome');
+});
 
+Route::get('add', function () {
+    return view('movies/create');
+});
+
+// Route::resource('movie', MovieController::class);
